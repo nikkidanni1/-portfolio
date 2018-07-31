@@ -1,26 +1,49 @@
-@media screen and (min-device-width: 1025px) {
-        header {
-            height: 800px;
-        }
-    }
-@media screen and (max-device-width: 1024px) {
-        header {
-            height: 500px;
-        }
+/*----основные стили для всей страницы-------*/
+body {
+	font-family: 'Nunito', sans-serif;
 }
-
+h1 {
+	letter-spacing: 0.4em;
+	font-size: 2.5em;
+}
+h3 {
+	font-size: 0.938em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-align: center;
+	color: #353535;
+}
+p {
+	font-size: 0.875em;
+	font-weight: 600;
+	text-align: center;
+	color: #8c9398;
+}
+hr {
+	border: none;
+	height: 4px;
+	background-color: #3DC9B3;
+	color: #3DC9B3;
+	width: 34px;
+	margin: 25px auto;
+}
+.img-separate {
+	background: url(../img/separate.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 34.6872%;
+	max-width: 555px;
+	height: 15px;
+	margin: 25px auto 45px;
+	}
+	
+/*----стили header-------*/
 header {
+	height: 800px;
 	background: url(../img/header_bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
 }
-
-/*-------Редактирование bootstrap стилей-------*/
-.navbar {
-	display: flex;
-	justify-content: flex-end;
-}
-
 .menu {
 	margin: 3.75% 14.375%;
 	&__img {
@@ -31,6 +54,172 @@ header {
 		display: block;
 	}
 }
+.header-text {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50%;
+	&__title {
+		color: #353535;
+		margin: 0;
+		span {
+			color: #A1A9B0;
+		}
+	}
+	&__description {
+		font-size: 0.938em;
+		letter-spacing: 0.2em;
+		color: #8C9398;
+		margin: 3.2787% 0 10.6557%;
+	}
+	&__button, &__button:focus {
+		font-size: 0.938em;
+		letter-spacing: 0.2em;
+		background-color: #3dc9b3;
+		border: none;
+		padding: 20px 38px;
+		box-shadow: 0px 3px 0px 0px #309383;
+		&:hover {
+			background-color: #3dc9b3;
+		}
+		&:active {
+			background-color: #309383 !important;
+			box-shadow: 0px 3px 0px 0px #309383 !important;
+			outline: none !important;
+			border: 0 !important;
+		}
+	}
+}
+
+/*-------Редактирование bootstrap стилей в header-------*/
+.navbar {
+	display: flex;
+	justify-content: flex-end;
+}
 .dropleft .dropdown-toggle::before {
 	content: none;
+}
+
+/*----стили description-------*/
+.description {
+	background-color: #F3F5F8;
+	padding: 6.875% 26.5625% 7.8126%;
+	.img-separate {
+		width: 65.294%;
+	}
+}
+
+/*----стили icons-section-------*/
+.icons-section {
+	padding: 6.25% 0 7.5%;
+	&__blocks {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		
+	}
+	&__block {
+		width: 22.5%;
+		min-width: 360px;
+		margin: .9375% .9375%;
+	}
+	&__title {
+		margin: 13.889% 0 0;
+	}
+	&__icon1 {
+		background: url(../img/sprite.png) no-repeat;
+		background-position: -218px -62px;
+		width: 155px;
+		height: 155px;
+		margin: 0 auto;
+	}
+	&__icon2 {
+		background: url(../img/sprite.png) no-repeat;
+		background-position: -58px -62px;
+		width: 155px;
+		height: 155px;
+		margin: 0 auto;
+	}
+	&__icon3 {
+		background: url(../img/sprite.png) no-repeat;
+		background-position: -378px -62px;
+		width: 155px;
+		height: 155px;
+		margin: 0 auto;
+	}
+}
+
+/*----стили carusel-------*/
+.carousel-section {
+	min-height: 700px;
+	margin: 0;
+	padding: 0;
+	background: #F3F5F8 url(../img/phone.png) no-repeat;
+	background-position: 35%;
+	&__for-flex {
+		display: flex;
+		justify-content: flex-end;
+		height: 100%;
+	}
+	&__carousel-block {
+		background-color: #fff;
+		min-height: 700px;
+		transition: .5s;
+	}
+	.carousel-item__text-block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.carousel-item__title {
+		width: 100%;
+		margin: 10.625% 0 0; 
+	}
+	.carousel-item__text {
+		text-align: justify;
+		max-width: 460px;
+	}
+}
+
+/*-------Редактирование bootstrap стилей в carousel-section-------*/
+.carousel-indicators li {
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	border:3px solid #C9CBCA;
+	background-color: rgba(0,0,0,0);
+	&.active {
+		background-color: #212024;
+	}
+}
+.carousel {
+	padding: 0;
+}
+.row {
+	margin: 0;
+	padding: 0;
+}
+.carousel-indicators {
+	margin: 10% 0;
+}
+
+/*----стили counter-------*/
+.counter {
+	background: #F3F5F8 url(../img/counter_img.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 300px;
+	&__title1 {
+		color: #fff;
+		text-align: center;
+		padding: 80px 0 25px; 
+	}
+	&__title2 {
+		font-size: 1.563em;
+		letter-spacing: .2em;
+		color: #fff;
+		text-align: center;
+	}
 }
